@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program36
+{
+    internal class Program
+    {
+        static void Main()
+        {
+            int value = 40;
+            int shift = 2;
+            int result = value >> shift;
+
+            // Показываем только 8 младших бит, дополняя нулями слева
+            string binary = Convert.ToString(result, 2).PadLeft(8, '0');
+
+            Console.WriteLine($"40 >> {shift} = {result}");
+            Console.WriteLine($"Двоичный вид (8 младших бит): {binary}");
+        }
+    }
+}
+
